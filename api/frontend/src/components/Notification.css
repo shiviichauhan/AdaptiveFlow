@@ -1,0 +1,62 @@
+.notification {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 18px;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-weight: 500;
+  box-shadow: var(--shadow-lg);
+  z-index: 3000;
+  max-width: 90vw;
+}
+
+.notification.success {
+  background: #059669;
+  color: white;
+}
+
+.notification.error {
+  background: #dc2626;
+  color: white;
+}
+
+.notification.info {
+  background: #2563eb;
+  color: white;
+}
+
+.notif-icon {
+  flex-shrink: 0;
+}
+
+.notif-close {
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: rgba(255,255,255,0.2);
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-shrink: 0;
+  margin-left: 4px;
+}
+
+.notif-close:hover {
+  background: rgba(255,255,255,0.3);
+}
+
+@media (max-width: 480px) {
+  .notification {
+    bottom: 16px;
+    padding: 10px 14px;
+    font-size: 12px;
+  }
+}
