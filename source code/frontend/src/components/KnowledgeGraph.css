@@ -1,0 +1,88 @@
+.knowledge-graph-panel {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 20px;
+}
+
+.graph-controls {
+  display: flex;
+  gap: 4px;
+}
+
+.zoom-btn {
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--border);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.zoom-btn:hover {
+  background: var(--bg-tertiary);
+  border-color: var(--border-hover);
+}
+
+.graph-container {
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  height: 260px;
+  position: relative;
+  overflow: hidden;
+  margin-top: 12px;
+}
+
+.graph-container canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.graph-legend {
+  display: flex;
+  gap: 16px;
+  margin-top: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+.legend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.legend-dot.mastered {
+  background: var(--accent-success);
+}
+
+.legend-dot.in-progress {
+  background: var(--accent-warning);
+}
+
+.legend-dot.not-started {
+  background: var(--border);
+}
+
+@media (max-width: 480px) {
+  .knowledge-graph-panel {
+    padding: 16px;
+  }
+  .graph-container {
+    height: 220px;
+  }
+}
