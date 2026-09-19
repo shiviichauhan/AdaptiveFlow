@@ -33,7 +33,7 @@ Personalized Adaptive Learning Path System with FastAPI + React.
 ```bash
 cd backend
 pip install fastapi uvicorn
-python -m backend.api
+python api.py
 ```
 
 Backend runs on `http://localhost:8000`
